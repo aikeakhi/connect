@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Fun with the DOM</title>
+    <script type="text/javascript">]
+        let clicks = 0; 
+
+        window.addEventListener('load', init);
+
+
+        let thebody = document.body;
+        thebody.addEventListener('click', clickCalled);
+        document.getElenebtById("mouseoverelement") .addEventListener('mouseover', clickCalled);
+
+        function clickCalled() {
+            clicks++;
+            console.log(clicks);
+
+            let clicksElement = document.getElementById("clicks");
+            clicksElement.innerHTML = clicks;
+            clicksElement
+            
+            clicksElement.style.fontSize = clicks + "px";
+
+        }
+
+
+     }
+    </script>
+</head>
+<body>
+    <div>Number of Clicks</div>
+    <div id="clicks">0</div>
+
+
+
+</body>
+</html>
